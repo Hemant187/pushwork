@@ -1,0 +1,116 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+@media (max-width:780px){
+  nav{
+    opacity: 0;
+
+  }
+  *{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 95%;
+    justify-content: center;
+  }
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media (min-width:780px){
+  main ,main footer,.container ,ul{
+    display: flex;
+    list-style: none;
+  }
+  ul, main{
+    flex-basis: 40%;
+    justify-content: space-around;
+  }
+  main  {
+    flex-basis: 50%;
+    flex-wrap: wrap;
+  }
+  main section{
+    padding: 5%;
+  }
+  main footer{
+    flex-basis: 100%;
+    justify-content: space-evenly;
+    align-items: end;
+    padding: 2% 0;
+  }
+  .container section{
+    flex-basis: 50%;
+    padding: 5% 5%;
+  }
+  .container section + section {
+    display: flex;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+  }
+  .who{
+    display: flex;
+  }
+  .who section{
+    flex-basis: 50%;
+    padding: 5%;
+  }
+  .how div{
+    display: flex;
+  }
+  .how{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+  }
+  .how > section{
+    text-align: center;
+    justify-content: space-around;
+  }
+  div section{
+    flex-basis: 50%;
+    justify-content: space-around;
+  }
+  .review, .feature,.order{
+    text-align: center;
+    padding: 5%;
+  }
+  .review *{
+    flex-direction: column;
+    display: flex;
+  }
+  .order{
+    display: flex;
+    padding: 5%;
+  }
+  footer{
+    display: flex;
+    justify-content: space-around;
+  }
+
+}
